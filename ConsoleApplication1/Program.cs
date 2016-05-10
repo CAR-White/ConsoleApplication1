@@ -30,7 +30,12 @@ namespace ConsoleApplication1
             SomeThing MySomeThing = new SomeThing();
 
             MySomeThing.MyField = "MyField";
+            Console.WriteLine("{0}     {1}", MySomeThing.MyField, MySomeThing.MyOtherField);
+            
+            MySomeThing.MyField = "inValid";
+            Console.WriteLine("{0}     {1}", MySomeThing.MyField, MySomeThing.MyOtherField);
 
+            MySomeThing.MyField = "INcoRRect";
             Console.WriteLine("{0}     {1}", MySomeThing.MyField, MySomeThing.MyOtherField);
 
 
@@ -102,14 +107,14 @@ namespace ConsoleApplication1
             {
                 // Do some custom stuff here, if desired.
                 // Note the "this" keyword is not actually required, just to emphersise a point
-                if (this._myField == "NOT HELLO") this._myField = "HELLO AGAIN";
+                if (this._myField.ToUpper() == "INCORRECT") this._myField = "The field is incorrect";
                 return this._myField;
             }
             set
             {
                 // Do some custom stuff here, if needed.
                 this._myField = value;
-                if (this._myField == "MyField") this._myField = "NOT HELLO";
+                if (this._myField.ToUpper() == "INVALID") this._myField = "The field is invalid";
             }
         }
 
