@@ -38,7 +38,7 @@ namespace ConsoleApplication1
             MySomeThing.MyField = "INcoRRect";
             Console.WriteLine("{0}     {1}", MySomeThing.MyField, MySomeThing.MyOtherField);
 
-
+            // This is a comment just to test Git
 
 
             Console.Read();
